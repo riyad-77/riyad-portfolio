@@ -204,27 +204,69 @@ h2 {
   font-weight: 600;
 }
 
-/* --- PROJECTS --- */
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
+/* --- SECTION PROJETS : Style avec Overlay --- */
 
 .project-card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 25px;
-  border-radius: 12px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Important pour les coins arrondis */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    width: 100%;
+    height: 350px; /* Augmente la hauteur pour contenir tout le texte */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Nécessaire pour positionner l'overlay à l'intérieur */
+}
+
+/* L'OVERLAY : Le secret de la lisibilité */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Crée un filtre sombre du bas vers le haut */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4));
+    
+    /* Positionne le texte en bas de la carte */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    padding: 30px; /* Espace intérieur */
+    color: #fff; /* Force le texte en blanc pour contraster avec le fond sombre */
+}
+
+/* Ajustements typographiques pour le texte sur fond sombre */
+.card-overlay h3 {
+    font-size: 1.5rem;
+    color: #fff !important; /* Force la couleur blanche */
+    margin-bottom: 10px;
+}
+
+.card-overlay p {
+    color: #ccc !important; /* Gris très clair */
+    font-size: 0.95rem;
+    margin-bottom: 20px;
 }
 
 .tags span {
-  background: #f0f0f0;
-  color: #444;
-  padding: 4px 10px;
-  border-radius: 5px;
-  font-size: 0.75rem;
-  margin-right: 5px;
+    background: rgba(255,255,255,0.2); /* Tags semi-transparents */
+    color: #fff;
+}
+
+.card-overlay a {
+    color: #38bdf8 !important; /* Ton bleu distinctif pour le lien */
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /* --- GALLERY --- */
