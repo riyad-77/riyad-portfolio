@@ -285,45 +285,39 @@ h2 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Ciblage ultra-précis pour forcer le Dark Mode sur les certifs */
+/* On s'assure que la section entière a le fond sombre du site */
+#certifications {
+    background-color: #0b1120 !important; /* Le bleu très sombre de ton site */
+    padding: 60px 20px;
+    width: 100%;
+}
+
+/* On force les cartes à être bleu nuit (comme la section Education) */
 #certifications .cert-card {
-    background-color: #1e293b !important; /* Fond bleu nuit */
+    background-color: #1e293b !important; /* Couleur identique à l'Education */
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    padding: 30px !important;
     border-radius: 15px !important;
+    padding: 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
     text-align: center !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Titre du certificat (ex: Python for Data Science) */
+/* On force le texte en blanc pour qu'il soit lisible sur le bleu nuit */
 #certifications .cert-card h3 {
-    color: #ffffff !important; /* Blanc pur pour un contraste maximal */
-    font-weight: 700 !important;
+    color: #ffffff !important;
     margin-top: 15px !important;
-    font-size: 1.2rem !important;
 }
 
-/* Texte descriptif (ex: Issued by IBM) */
 #certifications .cert-card p {
-    color: #cbd5e1 !important; /* Gris très clair pour la lisibilité */
-    font-size: 0.95rem !important;
-    margin-bottom: 20px !important;
+    color: #cbd5e1 !important; /* Gris clair */
 }
 
-/* Le lien "View Certificate" */
+/* Le lien "View Certificate" en bleu ciel */
 #certifications .view-cert {
-    color: #38bdf8 !important; /* Bleu ciel brillant */
-    text-decoration: none !important;
+    color: #38bdf8 !important;
     font-weight: 600 !important;
+    text-decoration: none !important;
+    margin-top: 15px !important;
     display: inline-block !important;
-    border: 1px solid #38bdf8 !important;
-    padding: 6px 15px !important;
-    border-radius: 5px !important;
-    transition: all 0.3s ease !important;
-}
-
-#certifications .view-cert:hover {
-    background-color: rgba(56, 189, 248, 0.1) !important;
-    color: #7dd3fc !important;
 }
 
