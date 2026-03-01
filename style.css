@@ -287,13 +287,13 @@ h2 {
 
 /* 1. Harmonisation du fond de la section avec le reste du site */
 #certifications {
-    background-color: #0b1120 !important; /* Le bleu très sombre identique à Education */
+    background-color: #1e293b; /* Un bleu-gris sombre et élégant */
     padding: 60px 20px;
 }
 
 /* 2. Harmonisation des cartes avec le bleu de la section Education */
 #certifications .cert-card {
-    background-color: #1a2333 !important; /* Bleu légèrement plus clair pour le relief */
+    background-color: #1e293b; /* Un bleu-gris sombre et élégant */
     border: 1px solid rgba(255, 255, 255, 0.05) !important;
     border-radius: 15px !important;
     padding: 30px !important;
@@ -303,7 +303,7 @@ h2 {
 
 /* 3. Suppression du fond blanc des logos */
 #certifications .cert-logo {
-    background-color: transparent !important; /* Supprime tout fond forcé */
+    background-color: #1e293b; /* Un bleu-gris sombre et élégant */
     mix-blend-mode: lighten; /* Rend le blanc du PNG transparent sur fond sombre */
     max-height: 50px;
     width: auto;
