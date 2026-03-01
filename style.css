@@ -287,7 +287,8 @@ h2 {
 
 /* On s'assure que la section est parfaitement intégrée */
 #certifications {
-    background-color: #0b1120 !important; /* Même fond que Education */
+    background-color: #1e293b; /* Un bleu-gris sombre et élégant */
+    border-radius: 15px;
     padding: 60px 20px;
 }
 
