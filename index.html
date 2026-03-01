@@ -1,0 +1,44 @@
+<header class="navbar">
+  <div class="logo">Riyad.</div>
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#skills">Stack</a>
+    <a href="#projects">Projets</a>
+    <a href="#engagement">Engagement</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>🚀 À propos de moi</h2>
+</section>
+
+<section id="skills">
+  <h2>🛠️ Stack Technique</h2>
+</section>
+
+<section id="projects">
+  <h2>📁 Projets Phares</h2>
+</section>
+
+<section id="engagement">
+  <h2>🏛️ Engagement Associatif</h2>
+</section>
+
+<section id="contact">
+  <h2>📫 Me contacter</h2>
+</section>
+
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  sections.forEach(section => observer.observe(section));
+</script>
