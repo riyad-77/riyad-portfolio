@@ -1,74 +1,52 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
-}
+// Scroll fluide pour les liens du menu
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+});
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-}
+// Animation des sections au scroll
+const sections = document.querySelectorAll("section");
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #38bdf8;
-}
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
 
-.navbar nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #e5e7eb;
-  font-weight: 500;
-  position: relative;
-}
+sections.forEach(section => observer.observe(section));
 
-.navbar nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background: #38bdf8;
-  transition: 0.3s;
-}
+// Effet actif sur le menu (optionnel mais pro)
+const navLinks = document.querySelectorAll("nav a");
 
-.navbar nav a:hover::after {
-  width: 100%;
-}
+window.addEventListener("scroll", () => {
+  let current = "";
 
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease;
-  margin: 80px auto;
-  width: 85%;
-}
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (pageYOffset >= sectionTop - 150) {
+      current = section.getAttribute("id");
+    }
+  });
 
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-card {
-  background: #020617;
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 25px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(56,189,248,0.15);
-}
-
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
+    }
+  });
+});
