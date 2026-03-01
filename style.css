@@ -115,3 +115,24 @@ h2 {
     border: 3px solid #007bff; /* Optionnel : un petit cercle bleu autour */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* Adaptations pour écrans de moins de 768px */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Le menu s'affiche verticalement */
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem; /* On réduit la taille du titre */
+  }
+
+  .profile-pic {
+    width: 120px; /* Photo un peu plus petite sur mobile */
+    height: 120px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* Une seule colonne pour les projets au lieu de deux */
+  }
+}
