@@ -302,33 +302,36 @@ h2 {
   }
 }
 
-/* --- IMAGES D'ARRIÈRE-PLAN DES PROJETS --- */
-
-.project-spam {
-    background-image: url('nlp.png'); /* Pour le projet NLP Spam Detection */
-}
-
-.project-stock {
-    background-image: url('dataviz.png'); /* Pour le projet Stock Market Risk */
-}
-
-.project-bankruptcy {
-    background-image: url('serieschrono.png'); /* Pour le projet Business Bankruptcy */
-}
-
-.project-titanic {
-    background-image: url('regression.png'); /* Pour le projet Titanic Survival */
-}
-
-/* On ajoute un petit effet de zoom au survol pour rendre le tout interactif */
-.project-card:hover .card-header {
-    transform: scale(1.05);
-    transition: transform 0.4s ease;
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Pour que l'image respecte les bords arrondis */
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-header {
-    transition: transform 0.4s ease;
-    /* Assure-toi que les PNG couvrent bien toute la zone */
+    width: 100%;
+    height: 180px; /* FORCE LA VISIBILITÉ DE L'IMAGE */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- LIEN AVEC TES FICHIERS PNG --- */
+.project-spam {
+    background-image: url('nlp.png'); 
+}
+
+.project-stock {
+    background-image: url('dataviz.png');
+}
+
+.project-bankruptcy {
+    background-image: url('serieschrono.png');
+}
+
+.project-titanic {
+    background-image: url('regression.png');
 }
