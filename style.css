@@ -275,4 +275,50 @@ h2 {
 }
 
 
+/* Section Education */
+.edu-item {
+    background-color: #1e293b; /* Un bleu-gris sombre et élégant */
+    color: #f1f5f9; /* Texte clair pour la lisibilité */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure discrète */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Certifications */
+.cert-card {
+    background-color: #1e293b; /* Même couleur que l'éducation pour la cohérence */
+    color: #f1f5f9;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol pour les rendre interactives */
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2); /* Halo bleu ciel au survol */
+}
+
+/* On s'assure que les logos ressortent bien */
+.cert-logo, .edu-logo {
+    filter: brightness(1.1); /* Augmente un peu la luminosité des logos */
+}
+
+/* Style des liens "View Certificate" sur fond sombre */
+.view-cert {
+    color: #38bdf8; /* Bleu ciel pour attirer l'œil */
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.view-cert:hover {
+    text-decoration: underline;
+}
+
+
 
