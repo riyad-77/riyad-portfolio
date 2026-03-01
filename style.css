@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
+  background: #fdfdfd; /* Fond presque blanc */
+  color: #1a1a1a;      /* Texte presque noir */
 }
 
 /* NAVBAR */
