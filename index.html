@@ -1,45 +1,103 @@
-<header class="navbar">
-  <div class="logo">Riyad.</div>
-  <nav>
-    <a href="#about">À propos</a>
-    <a href="#skills">Stack</a>
-    <a href="#projects">Projets</a>
-    <a href="#engagement">Engagement</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Riyad Lagzouli | Portfolio</title>
 
-<section id="about">
-  <h2>🚀 À propos de moi</h2>
-</section>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
 
-<section id="skills">
-  <h2>🛠️ Stack Technique</h2>
-</section>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<section id="projects">
-  <h2>📁 Projets Phares</h2>
-</section>
+  <!-- JS -->
+  <script src="./script.js" defer></script>
+</head>
 
-<section id="engagement">
-  <h2>🏛️ Engagement Associatif</h2>
-</section>
+<body>
 
-<section id="contact">
-  <h2>📫 Me contacter</h2>
-</section>
+  <!-- HEADER / MENU -->
+  <header class="navbar">
+    <div class="logo">Riyad.</div>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#skills">Stack</a>
+      <a href="#projects">Projets</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<script>
-  const sections = document.querySelectorAll("section");
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Salut, moi c’est <span>Riyad Lagzouli</span> 👋</h1>
+    <p>Élève Ingénieur en Data Science @ INSEA</p>
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/riyad-lagzouli-957876349/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/riyad-77" target="_blank">GitHub</a>
+      <a href="cv-icon.png" target="_blank">CV</a>
+    </div>
+  </section>
 
-  sections.forEach(section => observer.observe(section));
-</script>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>🚀 À propos de moi</h2>
+    <p>
+      Passionné par l’Intelligence Artificielle et la modélisation statistique.
+      Étudiant en 2ᵉ année du cycle ingénieur Data Science à l’INSEA – Rabat.
+    </p>
+  </section>
 
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>🛠️ Stack Technique</h2>
+    <ul>
+      <li><b>Langages :</b> Python, R</li>
+      <li><b>Domaines :</b> ML, Deep Learning, NLP, Statistiques</li>
+      <li><b>Outils :</b> Power BI, Git, Data Pipelines</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>📁 Projets Phares</h2>
+
+    <div class="project-card">
+      <h3>NLP Spam Detection</h3>
+      <p>TF-IDF, BERT, Transformers</p>
+      <a href="https://github.com/riyad-77/NLP-Spam-Detection" target="_blank">Voir le projet</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Analyse du Risque Boursier</h3>
+      <p>Dashboard Power BI – Yahoo Finance</p>
+      <a href="https://github.com/riyad-77/Power-BI" target="_blank">Voir le projet</a>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT -->
+  <section id="engagement">
+    <h2>🏛️ Engagement Associatif</h2>
+    <p>
+      Président du Club INSEA IT. Organisation de workshops, partenariats NVIDIA & DataCamp.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>📫 Me contacter</h2>
+    <p>Email : riadlag2004@gmail.com</p>
+    <p>Localisation : Rabat, Maroc</p>
+  </section>
+
+  <!-- IMAGES -->
+  <section class="gallery">
+    <img src="img1.jpeg">
+    <img src="img2.jpeg">
+    <img src="img3.jpeg">
+    <img src="img4.jpeg">
+  </section>
+
+</body>
+</html>
