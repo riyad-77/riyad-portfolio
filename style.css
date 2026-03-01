@@ -430,3 +430,38 @@ h2 {
 .view-link:hover {
   text-decoration: underline;
 }
+
+
+/* --- Style pour l'en-tête avec photo --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espace entre la photo et le nom */
+}
+
+.nav-profile-pic {
+  width: 40px;  /* Taille de la petite photo */
+  height: 40px;
+  border-radius: 50%; /* Rend la photo ronde */
+  object-fit: cover;
+  border: 2px solid #38bdf8; /* Un petit cercle bleu pour rappeler votre thème */
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%; /* Un peu moins de padding vertical pour une barre fine */
+  z-index: 1000;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
