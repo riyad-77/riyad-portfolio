@@ -151,9 +151,36 @@ h2 {
 
 /* --- GRILLE DE CERTIFICATIONS --- */
 .cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+    display: grid;
+    /* On crée une grille de 6 colonnes pour plus de flexibilité */
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Positionnement pour IBM et NVIDIA (Haut) */
+.cert-card.cert-top {
+    /* Chaque carte prend 3 colonnes sur 6 (donc 50% de la largeur) */
+    grid-column: span 3; 
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Positionnement pour les 3 DataCamp (Bas) */
+.cert-card.cert-bottom {
+    /* Chaque carte prend 2 colonnes sur 6 (donc 1/3 de la largeur) */
+    grid-column: span 2;
+}
+
+/* Adaptation Mobile */
+@media (max-width: 768px) {
+    .cert-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    .cert-card.cert-top, .cert-card.cert-bottom {
+        grid-column: span 1;
+    }
 }
 
 .cert-card {
