@@ -182,3 +182,31 @@ h2 {
     font-size: 0.9rem;
     color: #666;
 }
+
+
+/* Correction pour la section Certifications */
+#certifications {
+    background-color: #f4f7f6; /* Un gris très léger pour faire ressortir les cartes */
+    padding: 60px 20px;
+}
+
+.cert-card {
+    background-color: #ffffff; /* Fond blanc pur pour la carte */
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Ombre douce pour l'effet de relief */
+    transition: all 0.3s ease;
+}
+
+/* On s'assure que le texte est bien sombre et lisible */
+.cert-card h3 {
+    color: #2c3e50; 
+    margin: 15px 0 5px 0;
+}
+
+.cert-card p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
