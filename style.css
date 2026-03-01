@@ -285,39 +285,46 @@ h2 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Section Certifications */
-.cert-card {
-    background-color: #1e293b; /* Même couleur que l'éducation pour la cohérence */
-    color: #f1f5f9;
+/* On cible spécifiquement les cartes de certification pour écraser l'ancien style */
+#certifications .cert-card {
+    background-color: #1e293b !important; /* Force la couleur sombre */
+    color: #f1f5f9 !important;           /* Force le texte clair */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 25px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Effet au survol pour les rendre interactives */
-.cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2); /* Halo bleu ciel au survol */
+/* Ajustement des titres et textes dans les cartes */
+#certifications .cert-card h3 {
+    color: #ffffff;
+    margin-top: 15px;
 }
 
-/* On s'assure que les logos ressortent bien */
-.cert-logo, .edu-logo {
-    filter: brightness(1.1); /* Augmente un peu la luminosité des logos */
+#certifications .cert-card p {
+    color: #94a3b8; /* Un gris bleuté plus doux pour le sous-titre */
 }
 
-/* Style des liens "View Certificate" sur fond sombre */
-.view-cert {
-    color: #38bdf8; /* Bleu ciel pour attirer l'œil */
+/* Style du lien View Certificate pour qu'il soit bien visible */
+#certifications .view-cert {
+    color: #38bdf8 !important; 
     text-decoration: none;
     font-weight: 600;
-    margin-top: 15px;
     display: inline-block;
+    margin-top: 15px;
 }
 
-.view-cert:hover {
+#certifications .view-cert:hover {
     text-decoration: underline;
+    color: #7dd3fc !important;
+}
+
+/* Assure-toi que les logos ne sont pas trop sombres */
+#certifications .cert-logo {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+    max-height: 50px;
+    width: auto;
 }
 
 
