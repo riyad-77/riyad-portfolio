@@ -285,57 +285,45 @@ h2 {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* 1. Harmonisation du fond de la section avec le reste du site */
+/* On s'assure que la section est parfaitement intégrée */
 #certifications {
-    background: #0f172a;
-    color: #f1f5f9; /* Texte clair pour la lisibilité */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure discrète */
+    background-color: #0b1120 !important; /* Même fond que Education */
     padding: 60px 20px;
-    border-radius: 15px;
 }
 
-/* 2. Harmonisation des cartes avec le bleu de la section Education */
 #certifications .cert-card {
-    background-color: #1e293b; /* Un bleu-gris sombre et élégant */
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    background-color: #1a2333 !important; /* Bleu nuit assorti */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 15px !important;
-    padding: 30px !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
-    text-align: center !important;
+    padding: 30px;
+    text-align: center;
 }
 
-/* 3. Suppression du fond blanc des logos */
+/* Gestion des logos SVG */
 #certifications .cert-logo {
-    background-color: transparent;
-    mix-blend-mode: normal; /* plus besoin de lighten si le fond est déjà transparent */
-    max-height: 50px;
+    background: transparent !important; /* Plus de fond blanc possible */
+    height: 50px;
     width: auto;
-    display: block;
     margin: 0 auto 15px auto;
+    display: block;
+    /* Si tes SVG sont noirs et invisibles, cette ligne les rendra blancs : */
+    /* filter: brightness(0) invert(1); */
 }
 
-/* 4. Correction de la visibilité du texte */
 #certifications .cert-card h3 {
     color: #ffffff !important;
-    font-size: 1.1rem !important;
-    margin-bottom: 8px !important;
+    font-size: 1.1rem;
 }
 
 #certifications .cert-card p {
-    color: #94a3b8 !important; /* Gris bleuté doux */
-    font-size: 0.9rem !important;
+    color: #94a3b8 !important;
 }
 
-/* 5. Bouton "View Certificate" cohérent */
 #certifications .view-cert {
-    color: #38bdf8 !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    font-size: 0.85rem !important;
-    border: 1px solid rgba(56, 189, 248, 0.3) !important;
-    padding: 6px 12px !important;
-    border-radius: 6px !important;
-    display: inline-block !important;
-    margin-top: 10px !important;
+    color: #38bdf8 !important; /* Bleu ciel professionnel */
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    display: inline-block;
 }
 
