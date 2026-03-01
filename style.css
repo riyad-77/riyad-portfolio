@@ -306,8 +306,8 @@ h2 {
 
 /* 3. Suppression du fond blanc des logos */
 #certifications .cert-logo {
-    background-color: #1e293b; /* Un bleu-gris sombre et élégant */
-    mix-blend-mode: lighten; /* Rend le blanc du PNG transparent sur fond sombre */
+    background-color: transparent;
+    mix-blend-mode: normal; /* plus besoin de lighten si le fond est déjà transparent */
     max-height: 50px;
     width: auto;
     display: block;
