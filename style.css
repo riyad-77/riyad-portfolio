@@ -291,6 +291,7 @@ h2 {
     color: #f1f5f9; /* Texte clair pour la lisibilité */
     border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure discrète */
     padding: 60px 20px;
+    border-radius: 15px;
 }
 
 /* 2. Harmonisation des cartes avec le bleu de la section Education */
