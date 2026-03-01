@@ -287,7 +287,9 @@ h2 {
 
 /* 1. Harmonisation du fond de la section avec le reste du site */
 #certifications {
-    background-color: #1e293b; /* Un bleu-gris sombre et élégant */
+    background: #0f172a;
+    color: #f1f5f9; /* Texte clair pour la lisibilité */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure discrète */
     padding: 60px 20px;
 }
 
