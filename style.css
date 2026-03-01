@@ -361,19 +361,72 @@ h2 {
     background-repeat: no-repeat;
 }
 
-/* --- LIEN AVEC TES FICHIERS PNG --- */
-.project-spam {
-    background-image: url('nlp.png'); 
+#projects {
+  padding: 60px 20px;
 }
 
-.project-stock {
-    background-image: url('dataviz.png');
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
-.project-bankruptcy {
-    background-image: url('serieschrono.png');
+.project-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 30px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.project-titanic {
-    background-image: url('regression.png');
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #111; /* La bordure devient noire au survol */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #000;
+  font-weight: 700;
+}
+
+.project-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Aligne les liens en bas si les textes ont des longueurs différentes */
+}
+
+/* Style des Tags */
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tags span {
+  background: #f3f4f6;
+  color: #4b5563;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Lien GitHub */
+.view-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.view-link:hover {
+  text-decoration: underline;
 }
