@@ -16,20 +16,34 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  z-index: 100;
-  border-bottom: 1px solid #eee;
+  padding: 10px 5%; /* Un peu moins de padding vertical pour une barre fine */
+  z-index: 1000;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espace entre la photo et le nom */
+}
+
+.nav-profile-pic {
+  width: 40px;  /* Taille de la petite photo */
+  height: 40px;
+  border-radius: 50%; /* Rend la photo ronde */
+  object-fit: cover;
+  border: 2px solid #38bdf8; /* Un petit cercle bleu pour rappeler votre thème */
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
 }
 
 nav a {
@@ -149,6 +163,16 @@ h2 {
 
 .institution, .exp-date { color: #666; font-weight: 500; font-size: 0.95rem; }
 
+.exp-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.exp-item ul li {
+  margin-bottom: 5px;
+  color: #444;
+}
+
 /* --- GRILLE DE CERTIFICATIONS --- */
 .cert-grid {
     display: grid;
@@ -173,16 +197,6 @@ h2 {
     grid-column: span 2;
 }
 
-/* Adaptation Mobile */
-@media (max-width: 768px) {
-    .cert-grid {
-        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
-    }
-    .cert-card.cert-top, .cert-card.cert-bottom {
-        grid-column: span 1;
-    }
-}
-
 .cert-card {
   text-align: center;
   padding: 20px;
@@ -204,94 +218,6 @@ h2 {
   font-weight: 600;
 }
 
-/* --- SECTION PROJETS : Style avec Overlay --- */
-
-.project-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden; /* Important pour les coins arrondis */
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.card-header {
-    width: 100%;
-    height: 350px; /* Augmente la hauteur pour contenir tout le texte */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative; /* Nécessaire pour positionner l'overlay à l'intérieur */
-}
-
-/* L'OVERLAY : Le secret de la lisibilité */
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Crée un filtre sombre du bas vers le haut */
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.4));
-    
-    /* Positionne le texte en bas de la carte */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    
-    padding: 30px; /* Espace intérieur */
-    color: #fff; /* Force le texte en blanc pour contraster avec le fond sombre */
-}
-
-/* Ajustements typographiques pour le texte sur fond sombre */
-.card-overlay h3 {
-    font-size: 1.5rem;
-    color: #fff !important; /* Force la couleur blanche */
-    margin-bottom: 10px;
-}
-
-.card-overlay p {
-    color: #ccc !important; /* Gris très clair */
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-}
-
-.tags span {
-    background: rgba(255,255,255,0.2); /* Tags semi-transparents */
-    color: #fff;
-}
-
-.card-overlay a {
-    color: #38bdf8 !important; /* Ton bleu distinctif pour le lien */
-    text-decoration: none;
-    font-weight: 600;
-}
-
-/* --- GALLERY --- */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-}
-
-.image-grid img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.5rem; }
-  .navbar { flex-direction: column; gap: 10px; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .edu-item { flex-direction: column; text-align: center; }
-  .edu-logo { margin-bottom: 15px; margin-right: 0; }
-}
-
 /* --- SECTION STACK TECHNIQUE (Badges) --- */
 #skills {
   padding: 60px 20px;
@@ -310,9 +236,9 @@ h2 {
   display: flex;
   align-items: center;
   background-color: #f9fafb; /* Fond très clair */
-  color: #1a1a1a;           /* Texte sombre */
+  color: #1a1a1a;            /* Texte sombre */
   padding: 10px 18px;
-  border-radius: 25px;      /* Forme "pilule" complète */
+  border-radius: 25px;       /* Forme "pilule" complète */
   font-weight: 500;
   font-size: 0.9rem;
   border: 1px solid #e5e7eb; /* Bordure discrète */
@@ -327,40 +253,12 @@ h2 {
 }
 
 .stack-badge img {
-  height: 20px;       /* Taille des icônes */
+  height: 20px;        /* Taille des icônes */
   width: auto;
   margin-right: 10px; /* Espace entre l'icône et le texte */
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 600px) {
-  .stack-container {
-    gap: 8px; /* Moins d'espace sur mobile */
-  }
-  
-  .stack-badge {
-    font-size: 0.8rem;
-    padding: 8px 14px;
-  }
-}
-
-.project-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden; /* Pour que l'image respecte les bords arrondis */
-    border: 1px solid #eee;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-header {
-    width: 100%;
-    height: 180px; /* FORCE LA VISIBILITÉ DE L'IMAGE */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
+/* --- SECTION PROJETS --- */
 #projects {
   padding: 60px 20px;
 }
@@ -407,6 +305,7 @@ h2 {
   display: flex;
   gap: 8px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .tags span {
@@ -431,37 +330,38 @@ h2 {
   text-decoration: underline;
 }
 
-
-/* --- Style pour l'en-tête avec photo --- */
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* Espace entre la photo et le nom */
+/* --- GALLERY --- */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
 }
 
-.nav-profile-pic {
-  width: 40px;  /* Taille de la petite photo */
-  height: 40px;
-  border-radius: 50%; /* Rend la photo ronde */
+.image-grid img {
+  width: 100%;
+  height: 150px;
   object-fit: cover;
-  border: 2px solid #38bdf8; /* Un petit cercle bleu pour rappeler votre thème */
+  border-radius: 10px;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 5%; /* Un peu moins de padding vertical pour une barre fine */
-  z-index: 1000;
-  border-bottom: 1px solid #eaeaea;
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .navbar { flex-direction: column; gap: 10px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .edu-item { flex-direction: column; text-align: center; }
+  .edu-logo { margin-bottom: 15px; margin-right: 0; }
+  .cert-grid { grid-template-columns: 1fr; }
+  .cert-card.cert-top, .cert-card.cert-bottom { grid-column: span 1; }
 }
 
-.logo {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1a1a1a;
+@media (max-width: 600px) {
+  .stack-container {
+    gap: 8px; /* Moins d'espace sur mobile */
+  }
+  
+  .stack-badge {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
 }
