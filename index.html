@@ -35,7 +35,7 @@
     </div>
     
     <h1>Hi, I'm <span>Riyad Lagzouli</span></h1>
-    <p>3rd-Year Data Science Engineering Student @ INSEA Rabat</p>
+    <p>Final-Year Data Science Engineering Student @ INSEA Rabat · Data Engineering</p>
 
     <div class="socials">
       <a href="https://www.linkedin.com/in/riyad-lagzouli-957876349/" target="_blank">LinkedIn</a>
@@ -47,16 +47,33 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      As a final-year Data Science Engineering student at INSEA Rabat, I specialize in the end-to-end data lifecycle, from building robust Data Lakehouse pipelines to designing advanced Machine Learning models and deploying them via backend expert systems (FastAPI, Docker). Having recently engineered a complete decision support API from scratch at Bifolia, my goal is to bridge the gap between raw data and actionable insights by creating optimized predictive systems. 
+      As a final-year Data Science Engineering student at INSEA Rabat, I focus on data engineering: building reliable pipelines that turn raw, messy sources into tested, analytics-ready data. I recently built a daily lakehouse on Databricks (PySpark, Delta Lake, dbt) that tracks Morocco's bank branch network, and during my internship at Bifolia I engineered the data pipelines and REST API of a deterministic expert system for agronomic decision support.
     </p>
     <p>
-      I am currently seeking a 6-month end-of-studies internship (PFE) where I can apply my dual expertise in Data Science and Data Engineering to tackle complex challenges, such as Credit Scoring, Risk Management, or process automation.
+      I am currently seeking a 6-month end-of-studies internship (PFE) starting February 1, 2027, where I can apply my dual expertise in Data Engineering and Data Science to tackle complex challenges, such as Credit Scoring, Risk Management, or process automation.
     </p>
   </section>
 
   <section id="skills">
   <h2>Technical Stack</h2>
   <div class="stack-container">
+
+    <div class="stack-badge">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/databricks.svg" alt="Databricks">
+      Databricks
+    </div>
+    <div class="stack-badge">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/apachespark.svg" alt="Apache Spark">
+      PySpark / Delta Lake
+    </div>
+    <div class="stack-badge">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/dbt.svg" alt="dbt">
+      dbt
+    </div>
+    <div class="stack-badge">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@13/icons/githubactions.svg" alt="GitHub Actions">
+      GitHub Actions
+    </div>
     
     <div class="stack-badge">
       <img src="python.svg" alt="Python">
@@ -133,12 +150,12 @@
     <h2>Professional & Extracurricular Experience</h2>
     
     <div class="exp-item">
-      <h3>Data Scientist Intern | Bifolia</h3>
-      <p class="exp-date">July 2026 - August 2026</p>
+      <h3>Data Science &amp; Engineering Intern | Bifolia</h3>
+      <p class="exp-date">June 15 - September 11, 2026 | SmartFellah project, agronomic decision support</p>
       <ul>
-        <li>Engineered a deterministic backend expert system delivering real-time agronomic decision support, specifically for water balance and phytosanitary risk assessments.</li>
-        <li>Architected robust, automated ETL data pipelines using Apache Airflow, integrating complex geospatial modeling via PostgreSQL and PostGIS.</li>
-        <li>Developed and deployed a highly responsive FastAPI application for predictive model inference, containerizing the entire production environment with Docker for seamless scalability.</li>
+        <li>Designed a deterministic expert system: every recommendation is traceable to the rules and thresholds that triggered it.</li>
+        <li>Built Airflow-orchestrated ETL pipelines: Ministry of Agriculture PDF documents structured into JSON (local LLM, Ollama), NDVI, NDWI and EVI satellite indices (Google Earth Engine) and OpenWeather forecasts, stored in PostgreSQL/PostGIS.</li>
+        <li>Developed a FastAPI REST API with 5 services (crop recommendation by municipality, daily irrigation and fertilization advice, 5-day disease alerts), containerized with Docker.</li>
         <!-- Ligne ajoutée avec le lien GitHub -->
         <li style="list-style: none; margin-top: 10px;">
           <a href="https://github.com/riyad-77/SmartFellah" target="_blank" style="color: #007bff; text-decoration: none; font-weight: 600;">
@@ -175,13 +192,6 @@
       </ul>
     </div>
 
-    <div class="exp-item">
-      <h3>Appointment Setter | NL CALL</h3>
-      <p class="exp-date">January - August 2023</p>
-      <ul>
-        <li>Managed outbound call campaigns and qualified appointment booking.</li>
-      </ul>
-    </div>
   </section>
 
   <section id="education">
@@ -196,7 +206,7 @@
         <h3>Engineering Degree in Data Science</h3>
         <p class="institution">National Institute of Statistics and Applied Economics (INSEA) – Rabat </p>
         <p class="date">2024 – Present (3rd Year) </p>
-        <p class="description">Focused on Machine Learning, NLP, Data Engineering, and Predictive Systems.</p>
+        <p class="description">Focused on Data Engineering, Machine Learning, NLP and Statistics.</p>
       </div>
     </div>
 
@@ -263,13 +273,27 @@
     <div class="projects-grid">
 
       <div class="project-card">
-        <h3>Bank Reviews Lakehouse</h3>
-        <p>End-to-end Data Lakehouse (Bronze/Silver/Gold) using dbt and DuckDB. Automated scraping & sentiment analysis with Power BI dashboarding.</p>
+        <h3>Morocco Bank Network Lakehouse</h3>
+        <img src="https://raw.githubusercontent.com/riyad-77/morocco-bank-network-lakehouse/main/dashboard.png" alt="Power BI dashboard of Morocco's bank branch network" style="width: 100%; height: 150px; object-fit: cover; object-position: top; border-radius: 8px; margin-bottom: 10px;">
+        <p>Daily Databricks pipeline ingesting 2,700+ OpenStreetMap bank branches: Delta medallion architecture, multilingual name normalization (French, Arabic, Tifinagh), spatial join to the 12 regions, incremental MERGE and SCD2 history. dbt star schema with 25 tests, GitHub Actions CI and a Power BI dashboard of branches per 10,000 inhabitants.</p>
         <div class="tags">
-          <span>DuckDB</span> 
-          <span>dbt</span> 
-          <span>Airflow</span>
-          <span>Data Engineering</span>
+          <span>Databricks</span>
+          <span>PySpark</span>
+          <span>Delta Lake</span>
+          <span>dbt</span>
+          <span>CI</span>
+        </div>
+        <a href="https://github.com/riyad-77/morocco-bank-network-lakehouse" target="_blank" class="view-link">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Bank Branch Reviews Analysis</h3>
+        <p>Google Maps reviews collected by web scraping, organized in medallion layers, with sentiment analysis and a Power BI dashboard.</p>
+        <div class="tags">
+          <span>Selenium</span>
+          <span>DuckDB</span>
+          <span>NLP</span>
+          <span>Power BI</span>
         </div>
         <a href="https://github.com/riyad-77/Bank-Reviews-Lakehouse" target="_blank" class="view-link">View on GitHub</a>
       </div>
@@ -304,7 +328,7 @@
 
       <div class="project-card">
         <h3>SmartFellah Backend API</h3>
-        <p>Expert system API for agronomic decision support. Real-time water balance calculation and phytosanitary risk assessment.</p>
+        <p>REST API of a deterministic expert system for agronomic decision support: crop recommendation, daily irrigation advice (FAO water balance) and 5-day disease risk alerts.</p>
         <div class="tags"><span>FastAPI</span> <span>PostGIS</span> <span>Docker</span></div>
         <a href="https://github.com/riyad-77/SmartFellah" target="_blank" class="view-link">View on GitHub</a>
       </div>
